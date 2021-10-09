@@ -187,9 +187,9 @@ namespace AimsharpWow.Modules
                 }
             }
 
-            if (class == "Warrior")
+            if (Class == "Warrior")
             {
-                interrupts.add("Pummel");
+                Interrupts.Add("Pummel");
             }
 
             foreach (string Interrupt in Interrupts)
