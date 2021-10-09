@@ -72,7 +72,7 @@ namespace AimsharpWow.Modules
             Settings.Add(new Setting("Kick at milliseconds remaining", 100, 1500, 1000));
             Settings.Add(new Setting("Kick channels after milliseconds", 50, 2000, 500));
             Settings.Add(new Setting("Minimum delay", 50, 2000, 500));
-            List<string> ClassList = new List<string>(new string[] { "Shaman", "Death Knight", "Guardian Druid", "Monk", "Mage", "Hunter", "Shadow Priest", "Rogue" });
+            List<string> ClassList = new List<string>(new string[] { "Shaman", "Death Knight", "Guardian Druid", "Monk", "Mage", "Hunter", "Shadow Priest", "Rogue","Demon Hunter", "Warrior" });
             Settings.Add(new Setting("Class", ClassList, "Monk"));
             Settings.Add(new Setting("Kick from OoC?", true));
             Settings.Add(new Setting("Use CC to interrupt?", true));
@@ -129,10 +129,10 @@ namespace AimsharpWow.Modules
                 Interrupts.Add("Silence");
             }
 
-            //if (Class == "Demon Hunter")
-            //{
-            //    Interrupts.Add("Disrupt");
-            //}
+            if (Class == "Demon Hunter")
+            {
+                Interrupts.Add("Disrupt");
+            }
 
             if (Class == "Shaman")
             {
@@ -187,10 +187,10 @@ namespace AimsharpWow.Modules
                 }
             }
 
-            //if (Class == "Warrior")
-            //{
-            //    Interrupts.Add("Pummel");
-            //}
+            if (class == "Warrior")
+            {
+                interrupts.add("Pummel");
+            }
 
             foreach (string Interrupt in Interrupts)
             {
@@ -228,7 +228,7 @@ namespace AimsharpWow.Modules
                 "310392, 184381, 334538, 330755, 295929, 332181, 297966, 355930, 355934, 354297, 356537, 347775, 355057, 355225, 347903, 358131, 350922, 357404, 156877, 347152, 351119, 346980, 352347, 355132, 355737, 358967}";
 
             string InRangeItem = "0"; 
-            if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue")
+            if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue" || Class == "Demon Hunter" || Class == "Warrior")
             {
                 InRangeItem = "32321";
             }
@@ -457,7 +457,7 @@ namespace AimsharpWow.Modules
                 bool InRange = false;
                 bool ShouldKickMO = Aimsharp.CustomFunction("ShouldKickMO") == 1;
 
-                if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue")
+                if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue" || Class == "Demon Hunter" || Class == "Warrior")
                 {
                     InRange = Aimsharp.Range("target") <= 10;
                 }
