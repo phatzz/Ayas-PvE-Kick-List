@@ -72,7 +72,7 @@ namespace AimsharpWow.Modules
             Settings.Add(new Setting("Kick at milliseconds remaining", 100, 1500, 1000));
             Settings.Add(new Setting("Kick channels after milliseconds", 50, 2000, 500));
             Settings.Add(new Setting("Minimum delay", 50, 2000, 500));
-            List<string> ClassList = new List<string>(new string[] { "Shaman", "Death Knight", "Guardian Druid", "Monk", "Mage", "Hunter", "Shadow Priest", "Rogue","Demon Hunter", "Warrior" });
+            List<string> ClassList = new List<string>(new string[] { "Shaman", "Death Knight", "Guardian Druid", "Monk", "Mage", "Hunter", "Shadow Priest", "Rogue", "Demon Hunter", "Warrior" });
             Settings.Add(new Setting("Class", ClassList, "Monk"));
             Settings.Add(new Setting("Kick from OoC?", true));
             Settings.Add(new Setting("Use CC to interrupt?", true));
@@ -143,10 +143,10 @@ namespace AimsharpWow.Modules
                 }
             }
 
-            //if (Class == "Paladin")
-            //{
-            //    Interrupts.Add("Rebuke");
-            //}
+            if (Class == "Paladin")
+            {
+                Interrupts.Add("Rebuke");
+            }
 
             if (Class == "Death Knight")
             {
@@ -167,10 +167,10 @@ namespace AimsharpWow.Modules
                 }
             }
 
-            //if (Class == "Warlock")
-            //{
-            //    Interrupts.Add("Spell Lock");
-            //}
+            if (Class == "Warlock")
+            {
+                Interrupts.Add("Spell Lock");
+            }
 
             if (Class == "Mage")
             {
@@ -227,13 +227,13 @@ namespace AimsharpWow.Modules
                 "341969,342139,	330562,	330810,	330868,	341771,	330532,	330875,	319669,	324589,	342675,	330586,	263085, 294526, 298844, 332165, 329930, 294517, 296839, 294165, 330118, 258935, 277040, 242391, 330573, 345554, 327461, 330479," +
                 "310392, 184381, 334538, 330755, 295929, 332181, 297966, 355930, 355934, 354297, 356537, 347775, 355057, 355225, 347903, 358131, 350922, 357404, 156877, 347152, 351119, 346980, 352347, 355132, 355737, 358967}";
 
-            string InRangeItem = "0"; 
-            if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue" || Class == "Demon Hunter" || Class == "Warrior")
+            string InRangeItem = "0";
+            if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue" || Class == "Demon Hunter" || Class == "Warrior" || Class == "Paladin")
             {
                 InRangeItem = "32321";
             }
 
-            if (Class == "Mage" || Class == "Shaman" || Class == "Hunter" || Class == "Shadow Priest")
+            if (Class == "Mage" || Class == "Shaman" || Class == "Hunter" || Class == "Shadow Priest" || Class == "Warlock")
             {
                 InRangeItem = "18904";
             }
