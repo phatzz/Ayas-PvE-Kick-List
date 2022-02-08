@@ -72,7 +72,7 @@ namespace AimsharpWow.Modules
             Settings.Add(new Setting("Kick at milliseconds remaining", 100, 1500, 1000));
             Settings.Add(new Setting("Kick channels after milliseconds", 50, 2000, 500));
             Settings.Add(new Setting("Minimum delay", 50, 2000, 500));
-            List<string> ClassList = new List<string>(new string[] { "Shaman", "Death Knight", "Guardian Druid", "Monk", "Mage", "Hunter", "Shadow Priest", "Rogue", "Demon Hunter", "Warrior" });
+            List<string> ClassList = new List<string>(new string[] { "Shaman", "Death Knight", "Guardian Druid", "Monk", "Mage", "Hunter", "Shadow Priest", "Rogue", "Demon Hunter", "Warrior","Paladin", "Warlock" });
             Settings.Add(new Setting("Class", ClassList, "Monk"));
             Settings.Add(new Setting("Kick from OoC?", true));
             Settings.Add(new Setting("Use CC to interrupt?", true));
