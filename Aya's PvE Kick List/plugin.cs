@@ -496,6 +496,8 @@ namespace AimsharpWow.Modules
         183345, //Shadow Bolt 
         297024, //Soul Echo 
         258935, //Inner Flames 
+        329423, //Inner Flames 2
+        258938, //Inner Flames 3
         277040, //Soul of Mist 
         242391, //Terror 
         330573, //Bounty of The Forest 
