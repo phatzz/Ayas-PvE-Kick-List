@@ -131,6 +131,10 @@ namespace AimsharpWow.Modules
             if (Class == "Paladin")
             {
                 Interrupts.Add("Rebuke");
+                if (UseCC)
+                {
+                    CCInterrupts.Add("Hammer of Justice");
+                }
             }
             if (Class == "Death Knight")
             {
