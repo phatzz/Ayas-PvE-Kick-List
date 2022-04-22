@@ -607,7 +607,7 @@ namespace AimsharpWow.Modules
                     }
                 }
 
-                if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue" || Class == "Demon Hunter" || Class == "Warrior")
+                if (Class == "Monk" || Class == "Guardian Druid" || Class == "Death Knight" || Class == "Rogue" || Class == "Demon Hunter" || Class == "Warrior" || Class == "Paladin")
                 {
                     InRange = Aimsharp.Range("target") <= 10;
                 }
